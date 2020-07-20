@@ -1,0 +1,48 @@
+	<section class="sec1"></section>
+    <section class="secText">
+        <h1>Bienvenido a FlowerLand</h1>
+        <p>La red social exclusiva para los amantes de las flores</p>
+    </section>
+    <section class="sec2"></section>
+    <section class="secText" *ngIf="!identity">
+        <h1 class="lines-effect">Registrarse o Iniciar Sesion</h1>
+        <br>
+        <div class="col-lg-6 col-lg-offset-3">
+
+					<a [routerLink]="['/registro']" [routerLinkActive]="['active']" class="btn btn-lg" role="button">
+						Registrarse
+					</a>
+					<a [routerLink]="['/login']" [routerLinkActive]="['active']" class="btn btn-lg" role="button">
+						Iniciar Sesion
+					</a>
+					
+		</div>
+    </section>
+    <section class="secText" *ngIf="identity">
+        <h1 class="lines-effect">Elige a donde quieres ir</h1>
+        <br>
+        <div class="col-lg-6 col-lg-offset-3">
+
+                    <a [routerLink]="['/mensajes']" [routerLinkActive]="['active']" class="btn btn-lg" role="button">
+                        Mensajes
+                    </a>
+					<a [routerLink]="['/gente']" [routerLinkActive]="['active']" class="btn btn-lg" role="button">
+						Gente
+                    </a>
+                    <a [routerLink]="['/timeline']" [routerLinkActive]="['active']" class="btn btn-lg" role="button">
+						Timeline
+					</a>
+					
+		</div>
+    </section>
+    <section class="sec3"></section>
+    <section class="secText">
+        <h1>Sadhguru</h1>
+        <p>"Un mundo lleno de amor,luz y risas;
+            el tiempo ha llegado,
+            Hagamos que suceda"</p>
+    </section>
+<footer class="text-center">
+    <p>FlowerLand &copy; 2020 - All rights reserved</p>
+</footer>
+	

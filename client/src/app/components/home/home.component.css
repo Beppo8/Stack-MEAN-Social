@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+section 
+{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+section.sec1
+{
+    background: url(images/img1.jpg) ;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+section.sec2
+{
+    background: url(images/img2.jpg) ;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+section.sec3
+{
+    background: url(images/img3.jpg) ;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+section.sec4
+{
+    background: url(images/img4.jpg) ;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+section.secText
+{
+    background-image : url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=5c5c5c&density=13&opacity=62);
+    border-width: 8px;
+    border-color: black;
+    border-style: solid;
+    padding: 50px 100px;
+    height: auto;
+}
+
+section.secText h1
+{
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    color: #262626;
+}
+
+section.secText p
+{
+    font-size: 22px;
+    font-family: 'Odibee Sans' ;
+    text-align: center;   
+}
+
+section.secText a
+{
+    font-size: 22px;
+    font-family: 'Odibee Sans' ;
+    color: black;
+    float: right;
+}
+
+footer 
+{
+    padding: 1.5rem;
+    background: rgb(99, 99, 99);
+    color: white;
+}
+  
+footer p 
+{
+    margin: 0;
+}
+
+/* ESTILO TITULO */
+  
+section.secText h1{
+    text-align: center;
+    display: inline-inline-block;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+section.secText h1::after,h1::before{
+    content: '';
+    position: absolute;
+    width: 128px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.6em;
+  }
+  
+section.secText h1::before{
+    left: 150px;
+  }
+  h1::after{
+    right: 150px;
+  }
+  

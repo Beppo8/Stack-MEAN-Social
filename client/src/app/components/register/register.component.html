@@ -1,0 +1,71 @@
+	
+	<div class="alert alert-success" *ngIf="status == 'success'">
+		Registro completado correctamente, <a [routerLink]="['/login']">identificate aquí</a>
+	</div>
+
+	<div class="alert alert-danger" *ngIf="status == 'error'">
+		El registro no ha podido completarse, quizas tu email o nickname ya esté en uso, intentalo de nuevo con otros datos
+	</div>
+
+	<div class="container-login100" >
+		<div class="wrap-login100 p-l-55 p-r-55 p-b-30">
+			<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="login100-form">
+				<span class="login100-form-title p-b-37">
+					Registrarme
+				</span>
+
+				<div class=" wrap-input100 m-b-25">
+					<label>Nombre</label>
+					<input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" class="form-control" required />
+					<span *ngIf="!name.valid && name.touched">
+						El nombre es obligatorio!!
+					</span>
+				</div>
+		
+				<div class=" wrap-input100 m-b-25">
+					<label>Apellidos</label>
+					<input type="text" name="surname" #surname="ngModel" [(ngModel)]="user.surname" class="form-control" required />
+					<span *ngIf="!surname.valid && surname.touched">
+						Los apellidos son obligatorios!!
+					</span>
+				</div>
+		
+				<div class=" wrap-input100 m-b-25">
+					<label>Apodo</label>
+					<input type="text" name="nick" #nick="ngModel" [(ngModel)]="user.nick" class="form-control" required />
+					<span *ngIf="!nick.valid && nick.touched">
+						El apodo es obligatorio!!
+					</span>
+				</div>
+		
+				<div class=" wrap-input100 m-b-25">
+					<label>Correo electrónico</label>
+					<input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+					<span *ngIf="!email.valid && email.touched">
+						El correo no es correcto!!
+					</span>
+				</div>
+		
+		
+				<div class=" wrap-input100 m-b-25">
+					<label>Contraseña</label>
+					<input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required />
+					<span *ngIf="!password.valid && password.touched">
+						La constraseña es obligatoria!!
+					</span>
+				</div>
+		
+				<input type="submit" value="{{title}}" class="btn btn-success" [disabled]="!registerForm.form.valid" />
+				
+				<br>
+					<div class="text-center">
+						<a [routerLink]="['/login']" [routerLinkActive]="['active']"class="txt2 hov1">
+							Iniciar Sesion
+						</a>
+					</div>
+		
+			</form>
+		</div>
+	</div>
+
+	

@@ -1,0 +1,48 @@
+
+<div class="alert alert-success" *ngIf="status == 'success'">
+	Te has identificado correctamente, bienvenido!!
+</div>
+
+<div class="alert alert-danger" *ngIf="status == 'error'">
+	No te has podido identificar correctamente!!
+</div>
+
+
+<div class="container-login100">
+	<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+		<form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="login100-form">
+			<span class="login100-form-title p-b-37">
+				Identificarse
+			</span>
+
+			<label>Correo</label>
+			<div class="wrap-input100 m-b-20">
+				<input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+				<span *ngIf="!email.valid && email.touched">
+					El email no es correcto
+				</span>
+			</div>
+
+			<label>Contraseña</label>
+			<div class="wrap-input100 m-b-25">
+				<input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required >
+				<span *ngIf="!password.valid && password.touched">
+					La contraseña es obligatoria
+			   </span>
+			</div>
+
+			
+			<input type="submit" value="Entrar" class="btn btn-success" [disabled]="!loginForm.form.valid" />
+
+			<br>
+			<div class="text-center">
+				<a [routerLink]="['/registro']" [routerLinkActive]="['active']" class="txt2 hov1">
+					Registrarse
+				</a>
+			</div>
+		</form>
+
+
+	</div>
+</div>
+
