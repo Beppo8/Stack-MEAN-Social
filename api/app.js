@@ -14,6 +14,7 @@ var message_routes = require('./routes/message');
 // middlewares
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+app.use( express.static(__dirname + '/src/dist' ) );
 
 // cors
 app.use((req, res, next) => {

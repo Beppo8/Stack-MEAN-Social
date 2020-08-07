@@ -25,6 +25,7 @@
     "core-js": "^2.4.1",
     "jquery": "1.12",
     "moment": "^2.24.0",
+    "multer": "^1.4.2",
     "ngx-moment": "^3.5.0",
     "rxjs": "^6.5.4",
     "rxjs-compat": "^6.0.0-rc.0",
